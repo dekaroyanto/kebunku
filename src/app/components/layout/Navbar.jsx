@@ -83,7 +83,7 @@ export default function Navbar() {
             onClick={() => handleLinkClick("#contact")}
             className="hidden md:block bg-green-600 text-white px-6 py-2.5 rounded-full hover:bg-green-700 transition-all duration-200 font-medium shadow-md hover:shadow-lg"
           >
-            Get Quote
+            Contact Us
           </button>
 
           {/* Mobile Menu Button */}
@@ -124,7 +124,7 @@ export default function Navbar() {
               onClick={() => handleLinkClick("#contact")}
               className="w-full bg-green-600 text-white px-5 py-3 rounded-full hover:bg-green-700 transition-colors font-medium mt-4"
             >
-              Get Quote
+              Contact Us
             </button>
           </div>
         </motion.div>
