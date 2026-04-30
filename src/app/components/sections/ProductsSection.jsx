@@ -17,7 +17,6 @@ const products = [
     volume: "1L Concentrate",
     image:
       "https://plus.unsplash.com/premium_photo-1664527305901-a3c8bec62850?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    features: ["12 Minerals", "Seaweed Extract", "Amino Acids"],
   },
   {
     id: 2,
@@ -29,7 +28,6 @@ const products = [
     volume: "500ml Concentrate",
     image:
       "https://plus.unsplash.com/premium_photo-1664527306363-7a5798f0621c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    features: ["Neem-based", "Bee Safe", "Rainfast 2h"],
   },
   {
     id: 3,
@@ -41,7 +39,6 @@ const products = [
     volume: "250g Powder",
     image:
       "https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    features: ["50+ Fungi", "Drought Resistance", "Soil Structure"],
   },
   {
     id: 4,
@@ -53,7 +50,6 @@ const products = [
     volume: "1L Concentrate",
     image:
       "https://images.unsplash.com/photo-1590779032260-5623d6774f7a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    features: ["Preventive", "Low Toxicity", "Crop-safe"],
   },
   {
     id: 5,
@@ -64,7 +60,6 @@ const products = [
     volume: "1L Concentrate",
     image:
       "https://plus.unsplash.com/premium_photo-1680344513247-2dfbe6802e92?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    features: ["Bloom Booster", "Fruit Set", "Higher Yield"],
   },
   {
     id: 6,
@@ -75,7 +70,6 @@ const products = [
     volume: "500ml Spray",
     image:
       "https://plus.unsplash.com/premium_photo-1661833100239-de8f260b6f8c?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    features: ["Natural", "No Residue", "Organic Cert"],
   },
 ];
 
@@ -209,7 +203,10 @@ export default function ProductsSection() {
   // Don't render until mounted to prevent hydration mismatch
   if (!mounted) {
     return (
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <section
+        id="products"
+        className="py-24 bg-linear-to-b from-gray-50 to-white overflow-hidden"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-green-50 px-4 py-2 rounded-full mb-4">
@@ -366,38 +363,6 @@ export default function ProductsSection() {
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                   {product.description}
                 </p>
-
-                {/* Features */}
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {product.features.map((feature, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-
-                {/* CTA Button */}
-                <Button
-                  onClick={() => handleAddToCart(product.id)}
-                  className={`w-full rounded-full transition-all ${
-                    addedId === product.id
-                      ? "bg-green-100 text-green-700 hover:bg-green-100"
-                      : "bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white"
-                  }`}
-                >
-                  {addedId === product.id ? (
-                    <>
-                      <Check className="mr-2 h-4 w-4" /> Added to Cart
-                    </>
-                  ) : (
-                    <>
-                      <ShoppingCart className="mr-2 h-4 w-4" /> Request Quote
-                    </>
-                  )}
-                </Button>
               </div>
             </div>
           ))}

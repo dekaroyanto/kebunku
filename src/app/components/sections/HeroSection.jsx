@@ -3,15 +3,21 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Leaf, Droplets } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
+  const scrollToProducts = () => {
+    const productsSection = document.querySelector("#products");
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-gradient-to-br from-green-50 via-white to-emerald-50"
     >
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5" />
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -34,7 +40,9 @@ export default function HeroSection() {
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Boost Your Crop Yield with{" "}
-              <span className="text-green-600">Advanced Bio Solutions</span>
+              <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                Advanced Bio Solutions
+              </span>
             </h1>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -44,19 +52,12 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white rounded-full px-8"
+              <button
+                onClick={scrollToProducts}
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-full px-8 py-4 text-base font-medium shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer"
               >
-                Explore Products <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-green-600 text-green-600 hover:bg-green-50 rounded-full px-8"
-              >
-                Watch Demo
-              </Button>
+                Explore Products <ArrowRight className="h-4 w-4" />
+              </button>
             </div>
 
             <div className="flex items-center gap-8 mt-10 pt-6 border-t border-green-100">
