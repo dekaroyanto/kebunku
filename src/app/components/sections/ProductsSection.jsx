@@ -13,7 +13,6 @@ const products = [
     category: "Plant Vitamin",
     description:
       "Complete micronutrient complex for all crop types. Increases chlorophyll production.",
-    price: "$45.99",
     volume: "1L Concentrate",
     image:
       "https://plus.unsplash.com/premium_photo-1664527305901-a3c8bec62850?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -24,7 +23,6 @@ const products = [
     category: "Pest Control",
     description:
       "Broad-spectrum biological insecticide. Safe for beneficial insects.",
-    price: "$52.99",
     volume: "500ml Concentrate",
     image:
       "https://plus.unsplash.com/premium_photo-1664527306363-7a5798f0621c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -35,7 +33,6 @@ const products = [
     category: "Soil Enhancer",
     description:
       "Mycorrhizal inoculant for enhanced root development and water absorption.",
-    price: "$38.99",
     volume: "250g Powder",
     image:
       "https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -46,7 +43,6 @@ const products = [
     category: "Fungicide",
     description:
       "Systemic fungicide for powdery mildew, rust, and blight control.",
-    price: "$67.99",
     volume: "1L Concentrate",
     image:
       "https://images.unsplash.com/photo-1590779032260-5623d6774f7a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -56,7 +52,6 @@ const products = [
     name: "YieldMax Plus",
     category: "Plant Vitamin",
     description: "Advanced flowering and fruiting booster for maximum harvest.",
-    price: "$59.99",
     volume: "1L Concentrate",
     image:
       "https://plus.unsplash.com/premium_photo-1680344513247-2dfbe6802e92?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -66,7 +61,6 @@ const products = [
     name: "BioInsect Control",
     category: "Pest Control",
     description: "Natural predator attractant for organic pest management.",
-    price: "$49.99",
     volume: "500ml Spray",
     image:
       "https://plus.unsplash.com/premium_photo-1661833100239-de8f260b6f8c?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -352,9 +346,6 @@ export default function ProductsSection() {
                   <h3 className="font-bold text-lg text-gray-800 line-clamp-1">
                     {product.name}
                   </h3>
-                  <span className="text-green-600 font-bold text-lg">
-                    {product.price}
-                  </span>
                 </div>
 
                 <p className="text-gray-500 text-sm mb-3 line-clamp-1">
